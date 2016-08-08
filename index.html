@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>The Geolocation Game</title>
+        <meta name="description" content="The Geolocation Game">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, minimal-ui">
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="apple-mobile-web-app-title" content="The Geolocation Game">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/handjs/hand.min.js"></script>
+        <script src="bower_components/cannon.js/build/cannon.min.js"></script>
+        <script src="bower_components_external/oimo.js/build/oimo.min.js"></script>
+        <script src="bower_components/babylonjs/dist/babylon.2.4.max.js"></script>
+        <script src="bower_components/babylonjs/loaders/OBJ/babylon.objFileLoader.js"></script>
+        <script src="bower_components/babylonjs/loaders/glTF/babylon.glTFFileLoader.js"></script>
+        <script src="bower_components/babylonjs/loaders/STL/babylon.stlFileLoader.js"></script>
+        <link rel="stylesheet" href="assets/css/app.css">
+        <script>
+            function doFullscreen() {
+                var doc = window.document;
+                var docEl = doc.documentElement;
+
+                var requestFullScreen = docEl.requestFullscreen ||
+                    docEl.mozRequestFullScreen ||
+                    docEl.webkitRequestFullScreen || 
+                    docEl.msRequestFullscreen
+                ;
+
+                if(
+                    !doc.fullscreenElement &&
+                    !doc.mozFullScreenElement &&
+                    !doc.webkitFullscreenElement &&
+                    !doc.msFullscreenElement
+                ) {
+                    requestFullScreen.call(docEl);
+                }
+            }
+
+            window.addEventListener('click', function() {
+                doFullscreen();
+            }, false);
+        </script>
+    </head>
+    <body id="body">
+        <canvas id="canvas"></canvas>
+        <script src="src/helpers.js"></script>
+        <script src="src/scene.js"></script>
+        <script src="src/scene/skysphere.js"></script>
+        <script src="src/scene/cameras.js"></script>
+        <script src="src/scene/lights.js"></script>
+        <script src="src/scene/ui.js"></script>
+        <script src="src/scene/meshes.js"></script>
+        <script src="src/scene/geolocation.js"></script>
+        <script src="src/scene/map.js"></script>
+        <script src="src/scene/players.js"></script>
+        <script src="src/app.js"></script>
+    </body>
+</html>

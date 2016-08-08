@@ -1,0 +1,23 @@
+{
+  "name": "ar-game",
+  "authors": [
+    "Borut <bobalazek124@gmail.com>"
+  ],
+  "description": "The AR Game",
+  "main": "index.html",
+  "license": "Private",
+  "homepage": "http://bobalazek.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "babylonjs": "^2.4.1",
+    "handjs": "^1.3.9",
+    "cannon.js": "^0.6.2",
+    "jquery": "^3.1.0"
+  }
+}
